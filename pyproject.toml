@@ -1,0 +1,13 @@
+[project]
+name = "feishu-mcp-proxy"
+version = "0.1.0"
+description = "Auto-refreshing token proxy for Feishu MCP Server"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "aiohttp>=3.9",
+    "python-dotenv>=1.0",
+]
+
+[project.scripts]
+feishu-mcp-proxy = "feishu_mcp_proxy.__main__:main"
