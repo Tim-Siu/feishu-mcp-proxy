@@ -31,7 +31,7 @@ Feishu MCP Server
 ## 安装
 
 ```bash
-git clone https://github.com/<your-username>/feishu-mcp-proxy.git
+git clone https://github.com/Tim-Siu/feishu-mcp-proxy.git
 cd feishu-mcp-proxy
 pip install .
 ```
@@ -84,7 +84,17 @@ curl http://localhost:9099/health
 
 ## Claude Code 集成
 
-在项目目录下创建 `.mcp.json`：
+### 一键配置
+
+```bash
+claude mcp add feishu --transport http http://localhost:9099/mcp
+```
+
+这会自动将飞书 MCP 添加到你的 Claude Code 配置中。
+
+### 手动配置
+
+也可以在项目目录下创建 `.mcp.json`：
 
 ```json
 {
